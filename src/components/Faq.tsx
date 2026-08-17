@@ -9,8 +9,8 @@ export function Faq() {
         className="pointer-events-none absolute inset-0 opacity-[0.06]"
         style={{
           backgroundImage:
-            "radial-gradient(circle, #fff 1px, transparent 1.5px)",
-          backgroundSize: "22px 22px",
+            "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
         }}
       />
       <div className="relative">

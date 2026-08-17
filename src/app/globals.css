@@ -170,8 +170,9 @@ body {
 }
 
 .dotted-bg {
-  background-image: radial-gradient(circle, #d9dee5 1px, transparent 1.5px);
-  background-size: 22px 22px;
+  background-image: linear-gradient(to right, #e7eaef 1px, transparent 1px),
+    linear-gradient(to bottom, #e7eaef 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
 .shine-btn {

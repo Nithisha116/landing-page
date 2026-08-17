@@ -9,12 +9,14 @@ import { Hero } from "@/components/Hero";
 import { Instructor } from "@/components/Instructor";
 import { SilentKillers } from "@/components/SilentKillers";
 import { SocialProof } from "@/components/SocialProof";
+import { StatsBar } from "@/components/StatsBar";
 import { WhoIsThisFor } from "@/components/WhoIsThisFor";
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <StatsBar />
       <FeaturedOn />
       <WhoIsThisFor />
       <Brands />
