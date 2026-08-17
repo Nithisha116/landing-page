@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------- */
+/* Local fonts (extracted from the reference site's Google Fonts    */
+/* requests). Each family ships as up to 3 unicode-range subsets.   */
+/* ---------------------------------------------------------------- */
+
+/* Poppins — regular 400, the primary heading/body font on the reference page */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/poppins_variant1.woff2") format("woff2");
+  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0,
+    U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/poppins_variant2.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/poppins_variant3.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Roboto, Raleway, Roboto Slab — variable fonts (100-900) used for accent copy */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/roboto_variant1.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/roboto_variant2.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/roboto_variant3.woff2") format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/raleway_variant1.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/raleway_variant2.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/raleway_variant3.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+    U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323,
+    U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/roboto_slab_variant1.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/roboto_slab_variant2.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/roboto_slab_variant3.woff2") format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #182433;
+
+  /* Brand palette extracted from the reference site's stylesheet */
+  --color-brand-orange: #ffb433;
+  --color-brand-orange-dark: #faaa01;
+  --color-brand-orange-light: #ffd896;
+  --color-brand-navy: #182433;
+  --color-brand-ink: #0c0d0e;
+  --color-brand-charcoal: #171717;
+  --color-brand-gray: #706f6f;
+  --color-brand-gray-light: #d6d5d5;
+  --color-brand-green: #39b54a;
+  --color-brand-red: #f82f2f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-heading: "Poppins", "Roboto", "Raleway", ui-sans-serif, system-ui,
+    sans-serif;
+  --font-body: "Roboto", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-slab: "Roboto Slab", "Poppins", ui-serif, Georgia, serif;
+
+  --color-brand-orange: var(--color-brand-orange);
+  --color-brand-orange-dark: var(--color-brand-orange-dark);
+  --color-brand-orange-light: var(--color-brand-orange-light);
+  --color-brand-navy: var(--color-brand-navy);
+  --color-brand-ink: var(--color-brand-ink);
+  --color-brand-charcoal: var(--color-brand-charcoal);
+  --color-brand-gray: var(--color-brand-gray);
+  --color-brand-gray-light: var(--color-brand-gray-light);
+  --color-brand-green: var(--color-brand-green);
+  --color-brand-red: var(--color-brand-red);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+.dotted-bg {
+  background-image: radial-gradient(circle, #d9dee5 1px, transparent 1.5px);
+  background-size: 22px 22px;
+}
+
+.shine-btn {
+  position: relative;
+  overflow: hidden;
+}
+.shine-btn::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  top: 0;
+  left: -120px;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0) 70%
+  );
+  animation: shine 2.8s infinite linear;
+}
+@keyframes shine {
+  0% {
+    left: -120px;
+  }
+  50% {
+    left: 110%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+.animate-marquee-slow {
+  animation: marquee 45s linear infinite;
+}
+
+.blink-dot {
+  animation: blink 1.4s infinite;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
